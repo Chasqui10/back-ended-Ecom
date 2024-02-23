@@ -41,6 +41,14 @@ router.get('/:id', async (req, res) => {
 router.post('/', async (req, res) => {
   try {
     const newProduct = await Product.create(req.body);
+    // We need to create pairings to bulk create in the ProductTag model
+    const productTagIdArr = req.body.tagIds.map((tag_id) => {
+      return {
+        product_id: newProduct.id,
+        tag_id,
+      };
+    }
+    )
     res.status(200).json(newProduct);
   } catch (err) {
     res.status(400).json(err);

@@ -62,12 +62,13 @@ router.put('/:id', async (req, res) => {
   try {
     const productUpdate = await Product.update(req.body, {
       where: {
-        product_name: req.body.product_name,
-        price: req.body.price,
-        stock: req.body.stock,
-        category_id: req.body.category_id,
+        id: req.params.id,
       }
     });
+    if (!productUpdate[0]) {
+      res.status(404).json({ message: 'No product found with that id, double check your id.' });
+      return;
+    }
     // We need to create pairings to bulk create in the ProductTag model
     const productTagIdArr = req.body.tagIds.map((tag_id) => {
       return {

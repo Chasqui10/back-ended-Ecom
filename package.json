@@ -1,5 +1,5 @@
 {
-  "name": "module-13-challenge-orm",
+  "name": "back-end-project-2",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -8,9 +8,6 @@
     "start": "node server.js",
     "watch": "nodemon server.js",
     "seed": "node seeds/index.js"
-  },
-  "repository": {
-    "type": "git"
   },
   "keywords": [],
   "author": "",

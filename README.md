@@ -28,7 +28,7 @@
   reach out for discussion on it
   
   ## Test
-  N/A <br>
+  [Video of the Insomnia run through](https://drive.google.com/file/d/1AkymWl454OgshePhg2Gm0Z9xQ1yAbBlN/view?usp=sharing) <br>
 
   ## Questions
   Thank you again for reviewing this README.md. <br>
